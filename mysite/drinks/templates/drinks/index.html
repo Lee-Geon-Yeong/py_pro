@@ -1,0 +1,27 @@
+{%extends 'globals/base.html'%}
+{%block content%}
+<div class='container' style="margin-top:50px;">
+    <h2>Index: Entry point of web site</h2>
+    <ul class='list-group list-group-horizontal-sm'>
+        {% for object in objects%}
+        <li class="list-group-item">
+            <figure class='figure' style="width: 18rem;" >
+                    <a href={%url 'drinks:detail_view' object.id%}>
+                <img src="{{object.image.url}}" alt="{{object.image.name}}"
+                    class="figure-img img-fluid rounded img-thumbnail" style="height=300 width=300">
+                    </a>
+                <figcaption class="figcaption">
+                    name: {{object.name}}
+                </figcaption>
+                <figcaption class="figcaption">
+                    brand: {{object.brand.name}}
+                </figcaption>
+                <figcaption class="figcaption">
+                    likes: {{object.likes}}
+                </figcaption>
+            </figure>
+        </li>
+        {%endfor%}
+    </ul>
+</div>
+{%endblock%}

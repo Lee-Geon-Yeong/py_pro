@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "${workspaceFolder:clone_watch}/mysite/db.sqlite3",
+            "driver": "SQLite",
+            "name": "clone_watch",
+            "previewLimit": 50
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

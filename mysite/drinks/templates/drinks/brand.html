@@ -1,0 +1,19 @@
+{%extends 'globals/base.html'%}
+{%block content%}
+<h2 style="margin-top:50px;">{{object.name}}: 상세페이지</h2>
+<div class="text-center">
+<figure><img src="{{object.image.url}}" alt="{{object.image.name}}" width="300" height="300" class="mx-auto d-block">
+    <figcaption>
+        {{object.desc}}/{{object.image.name}}
+    </figcaption>
+</figure>
+
+<p>click to search {{object.name}}'s products</p>
+
+<section>
+    graph for brand
+    - selling stat by percentage.
+    - monthly solds
+</section>
+</div>
+{%endblock%}
